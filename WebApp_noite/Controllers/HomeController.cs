@@ -18,6 +18,11 @@ namespace WebApp_noite.Controllers
             return View();
         }
 
+        public IActionResult MinhaTela()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
