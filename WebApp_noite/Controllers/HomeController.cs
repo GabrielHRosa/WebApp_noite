@@ -23,6 +23,12 @@ namespace WebApp_noite.Controllers
             return View();
         }
 
+        //Home/Login
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
