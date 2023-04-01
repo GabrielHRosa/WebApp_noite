@@ -4,20 +4,20 @@
 
         <div class="card">
             <div class="card-header">
-                <h2>Lista de Produtos</h2>
+                <h2>Lista de Clientes</h2>
             </div>
             <div class="card-body">
-                
+
                 <div class="row">
                     <div class="col-2">
-                        <a href="/Produto/Cadastrar" class="btn btn-success">Novo Produto</a>
+                        <a href="/Cliente/Cadastrar" class="btn btn-success">Novo Cliente</a>
                     </div>
                     <div class="col-4">
                         <select name="Filtro" class="form-control">
                             <option value="0">Todas Opções</option>
                             <option value="id">Por Código</option>
                             <option value="Nome">Por Nome</option>
-                            <option value="qtd">Por Qtd</option>
+                            <option value="qtd">Por Telefone</option>
                         </select>
                     </div>
                     <div class="col-4">
@@ -29,7 +29,6 @@
                 </div>
 
                 <form action="Produto/Pesquisa" method="get">
-                
                 </form>
 
                 <table class="table table-striped">
@@ -37,45 +36,45 @@
                         <tr>
                             <th>Código</th>
                             <th>Nome</th>
-                            <th>Qtd Estoque</th>
+                            <th>Telefone</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Mouse Gamer</td>
-                            <td>150</td>
+                            <td>Gabriel</td>
+                            <td>16988732735</td>
                             <td>
-                                <a href="/Produto/Editar/1" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/1" class="btn btn-danger">Excluir</a>
+                                <a href="/Cliente/Editar/1" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir/1" class="btn btn-danger">Excluir</a>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Barbie Unicornio Feliz</td>
-                            <td>10</td>
+                            <td>Gilberto</td>
+                            <td>16988965487</td>
                             <td>
-                                <a href="/Produto/Editar/2" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/2" class="btn btn-danger">Excluir</a>
+                                <a href="/Cliente/Editar/2" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir/2" class="btn btn-danger">Excluir</a>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Cerveja Antartica Boa</td>
-                            <td>23</td>
+                            <td>Welder</td>
+                            <td>16997687070</td>
                             <td>
-                                <a href="/Produto/Editar/3" class="btn btn-warning">Editar</a>
-                                <a href="/Produto/Excluir/3" class="btn btn-danger">Excluir</a>
+                                <a href="/Cliente/Editar/3" class="btn btn-warning">Editar</a>
+                                <a href="/Cliente/Excluir/3" class="btn btn-danger">Excluir</a>
                             </td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
 
             </div>
         </div>
-    
+
     </div>
 
 </div>
