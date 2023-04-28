@@ -1,17 +1,37 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp_noite.Models;
 
 namespace WebApp_noite.Controllers
 {
     public class ClienteController : Controller
     {
+
+        public static List<ClientesModel> db = new List<ClientesModel>();
+
         public IActionResult Lista()
         {
-            return View();
+            return View(db);
         }
 
         public IActionResult Cadastrar() 
         {
-            return View();   
+            ClientesModel model = new ClientesModel();
+
+            return View(model);   
+        }
+
+        [HttpPost]
+        public IActionResult SalvarDados(ClientesModel cliente)
+        {
+            if(cliente.Id == 0)
+            {
+                Random rand = new Random();
+                cliente.Id = rand.Next(1, 9999);
+
+                db.Add(cliente);
+            }
+
+            return RedirectToAction("Lista");
         }
     }
 }

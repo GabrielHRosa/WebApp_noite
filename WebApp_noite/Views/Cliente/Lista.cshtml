@@ -1,4 +1,6 @@
-﻿<div class="row">
+﻿@model List<WebApp_noite.Models.ClientesModel>
+
+<div class="row">
 
     <div class="col-12">
 
@@ -41,33 +43,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Gabriel</td>
-                            <td>16988732735</td>
-                            <td>
-                                <a href="/Cliente/Editar/1" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir/1" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Gilberto</td>
-                            <td>16988965487</td>
-                            <td>
-                                <a href="/Cliente/Editar/2" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir/2" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Welder</td>
-                            <td>16997687070</td>
-                            <td>
-                                <a href="/Cliente/Editar/3" class="btn btn-warning">Editar</a>
-                                <a href="/Cliente/Excluir/3" class="btn btn-danger">Excluir</a>
-                            </td>
-                        </tr>
+                        @foreach(var cliente in Model)
+                        {
+                            
+                            <tr>
+                                <td>@cliente.Id</td>
+                                <td>@cliente.Nome</td>
+                                <td>@cliente.Telefone</td>
+                                <td>
+                                    <a href="/Cliente/Editar/@cliente.Id" class="btn btn-warning">Editar</a>
+                                    <a href="/Cliente/Excluir/@cliente.Id" class="btn btn-danger">Excluir</a>
+                                </td>
+                            </tr>
+
+                        }
 
                     </tbody>
                 </table>
