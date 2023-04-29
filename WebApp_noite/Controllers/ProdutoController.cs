@@ -40,7 +40,7 @@ namespace WebApp_noite.Controllers
         public IActionResult Excluir(int id)
         {
             ProdutosModel item = db.Find(a => a.Id == id);
-            if (item != null)
+            if (item != null) 
             {
                 db.Remove(item);
             }
