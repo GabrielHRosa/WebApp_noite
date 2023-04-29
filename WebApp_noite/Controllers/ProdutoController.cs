@@ -28,9 +28,37 @@ namespace WebApp_noite.Controllers
                 produto.Id = rand.Next(1, 9999);
 
                 db.Add(produto);
+            }else
+            {
+                int indice = db.FindIndex(a => a.Id == produto.Id);
+                db[indice] = produto;
             }
 
             return RedirectToAction("Lista");
+        }
+
+        public IActionResult Excluir(int id)
+        {
+            ProdutosModel item = db.Find(a => a.Id == id);
+            if (item != null)
+            {
+                db.Remove(item);
+            }
+            return RedirectToAction("Lista");
+        }
+
+        public IActionResult Editar(int id)
+        {
+            ProdutosModel item = db.Find(a => a.Id == id);
+            if (item != null)
+            {
+                return View(item);
+            }
+            else
+            {
+                return RedirectToAction("Lista");
+            }
+
         }
     }
 }
