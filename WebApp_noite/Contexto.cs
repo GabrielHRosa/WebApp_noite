@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApp_noite.Tabelas;
 
 namespace WebApp_noite
 {
@@ -6,6 +7,8 @@ namespace WebApp_noite
     {
         public Contexto(DbContextOptions<Contexto> opt)
              :base(opt) { }
+
+        public DbSet<Categorias> Categorias { get; set; }
 
     }
 }

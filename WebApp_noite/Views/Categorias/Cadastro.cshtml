@@ -1,0 +1,19 @@
+﻿@model WebApp_noite.Tabelas.Categorias;
+
+
+<form action="/Categorias/SalvarDados" method="post">
+    
+    <label>Nome</label>
+    <br />
+    <input name="Nome" type="text"/>
+    <br />
+    <select name="Ativo">
+        <option value="true">Ativa</option>
+        <option value="false">Inativa</option>
+    </select>
+
+    <button type="Submit">
+        Salvar Dados
+    </button>
+
+</form>
